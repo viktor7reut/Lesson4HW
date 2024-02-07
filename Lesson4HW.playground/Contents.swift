@@ -97,26 +97,21 @@ timesOfDay(isNight: true)
 //Task7
 
 func isPrimeNumber(number: Int) -> Bool {
-    
-    if number < 0 || number > 100 {
+    if (number < 0 && number > 100) == true {
         return false
-    }
-    
-    if number < 2 {
+    } else if number < 2 {
         return false
-    }
-    
-    for num in 2..<number {
-        if number % num == 0 {
-            return false
+    } else {
+        for num in 2..<number {
+            if number % num == 0 {
+                return false
+            }
         }
     }
-    
     return true
 }
 
-isPrimeNumber(number: 4)
-
+isPrimeNumber(number: 66)
 
 
 //Task8
@@ -141,7 +136,6 @@ wathSeason(mounthNumber: 11)
 
 
 //Task9
-//сквозной параметр?
 
 func factorialNumber(number: Int) {
     var numberFactorial = 0
@@ -153,7 +147,7 @@ func factorialNumber(number: Int) {
         numberFactorial -= 1
     }
     
-    print(result)
+    print("Факториал \(number) - \(result)")
 }
 
 factorialNumber(number: 10)
@@ -161,17 +155,65 @@ factorialNumber(number: 10)
 
 //Task10
 
+func subsequenceFibonacciForIndex(index: Int) -> String {
+    let rangeA = 2
+    var subsequenceFibonacci = ""
+    var firstNumber = 1
+    var secondNumber = 1
+    
+    subsequenceFibonacci.append("\(firstNumber)")
+    subsequenceFibonacci.append("\(secondNumber)")
 
+    for i in rangeA...index {
+        let rightNumber = firstNumber + secondNumber
+        subsequenceFibonacci.append("\(rightNumber)")
+        firstNumber = secondNumber
+        secondNumber = rightNumber
+    }
+    
+    return subsequenceFibonacci
+}
+
+subsequenceFibonacciForIndex(index: 7)
+
+
+//func subsequenceFibonacciForIndex(index: Int) -> [Int] {
+//    let rangeA = 2
+//    var subsequenceFibonacci: [Int] = []
+//    var firstNumber = 1
+//    var secondNumber = 1
+//    
+//    subsequenceFibonacci.append(firstNumber)
+//    subsequenceFibonacci.append(secondNumber)
+//
+//    for i in rangeA...index {
+//        let rightNumber = firstNumber + secondNumber
+//        subsequenceFibonacci.append(rightNumber)
+//        firstNumber = secondNumber
+//        secondNumber = rightNumber
+//    }
+//    
+//    return subsequenceFibonacci
+//}
+//
+//print(subsequenceFibonacciForIndex(index: 12))
 
 
 //Task11
 
-func sumNumbers(number: Int) {
+func sumNumbers(number: Int) -> Int {
     if number > 999 && number <= 9999 {
-        var result = 0
+        let oneNumber = number / 1000
+        let twoNumber = (number / 100) % 10
+        let threeNumber = (number / 10) % 10
+        let fourNumber = number % 10
+
+        let sum = oneNumber + twoNumber + threeNumber + fourNumber
         
-        1250 % 10
+        return sum
+    } else {
+        return 0
     }
 }
 
-sumNumbers(number: 1000)
+print(sumNumbers(number: 1523))
