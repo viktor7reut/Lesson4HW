@@ -97,6 +97,7 @@ timesOfDay(isNight: true)
 //Task7
 
 func isPrimeNumber(number: Int) -> Bool {
+    
     if number < 0 || number > 100 {
         return false
     }
@@ -138,3 +139,39 @@ func wathSeason(mounthNumber number: Int) -> String {
 
 wathSeason(mounthNumber: 11)
 
+
+//Task9
+//сквозной параметр?
+
+func factorialNumber(number: Int) {
+    var numberFactorial = 0
+    numberFactorial = number
+    var result = 1
+    
+    while numberFactorial > 0 {
+        result *= numberFactorial
+        numberFactorial -= 1
+    }
+    
+    print(result)
+}
+
+factorialNumber(number: 10)
+
+
+//Task10
+
+
+
+
+//Task11
+
+func sumNumbers(number: Int) {
+    if number > 999 && number <= 9999 {
+        var result = 0
+        
+        1250 % 10
+    }
+}
+
+sumNumbers(number: 1000)
