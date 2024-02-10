@@ -206,6 +206,34 @@ func subsequenceFibonacciForIndex(index: Int) -> [Int] {
 print(subsequenceFibonacciForIndex(index: 12))
 
 
+
+//func subsequenceFibonacciForIndex(index: Int) -> [Int] {
+//    var arrayIndexes: [Int] = []
+//    var subsequenceFibonacci: [Int] = []
+//    
+//    for number in 1...index {
+//        arrayIndexes.append(number)
+//    }
+//    
+//    for (index, number) in arrayIndexes.enumerated() {
+//        if index == 0 {
+//            subsequenceFibonacci.append(1)
+//        } else if index == 1 {
+//            subsequenceFibonacci.append(1)
+//        } else if index >= 2 && index <= arrayIndexes.count-1 {
+//            let result = subsequenceFibonacci[subsequenceFibonacci.count-1] + subsequenceFibonacci[subsequenceFibonacci.count-2]
+//            subsequenceFibonacci.append(result)
+//        }
+//    }
+//    return subsequenceFibonacci
+//}
+//
+//let result = subsequenceFibonacciForIndex(index: 5)
+//print(result)
+    
+    
+
+
 //Task11
 
 func sumNumbers(number: Int) -> Int {
