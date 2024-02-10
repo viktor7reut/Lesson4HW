@@ -76,12 +76,19 @@ divisionNumbers(num1: number1, num2: number2)
 
 //Task5
 
-func areaOfCircle(radius: Double) {
-    let numberPi: Double = 3.141592653589793
+func areaOfCircle(radius: Double, numberPi: Double = 3.141592653589793) {
     numberPi * (radius * radius)
 }
 
 areaOfCircle(radius: 3)
+areaOfCircle(radius: 4, numberPi: 3.14)
+
+//func areaOfCircle(radius: Double) {
+//    let numberPi: Double = 3.141592653589793
+//    numberPi * (radius * radius)
+//}
+//
+//areaOfCircle(radius: 3)
 
 
 //Task6
