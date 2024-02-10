@@ -162,48 +162,48 @@ factorialNumber(number: 10)
 
 //Task10
 
-func subsequenceFibonacciForIndex(index: Int) -> String {
-    let rangeA = 2
-    var subsequenceFibonacci = ""
-    var firstNumber = 1
-    var secondNumber = 1
-    
-    subsequenceFibonacci.append("\(firstNumber)")
-    subsequenceFibonacci.append("\(secondNumber)")
-
-    for i in rangeA...index {
-        let rightNumber = firstNumber + secondNumber
-        subsequenceFibonacci.append("\(rightNumber)")
-        firstNumber = secondNumber
-        secondNumber = rightNumber
-    }
-    
-    return subsequenceFibonacci
-}
-
-subsequenceFibonacciForIndex(index: 7)
-
-
-//func subsequenceFibonacciForIndex(index: Int) -> [Int] {
-//    let rangeA = 2
-//    var subsequenceFibonacci: [Int] = []
-//    var firstNumber = 1
-//    var secondNumber = 1
+//func subsequenceFibonacciForIndex(index: Int) -> String {
+//    let leftRangeNumber = 2
+//    var subsequenceFibonacci = ""
+//    var firstRangeNumber = 1
+//    var secondRangeNumber = 1
 //    
-//    subsequenceFibonacci.append(firstNumber)
-//    subsequenceFibonacci.append(secondNumber)
+//    subsequenceFibonacci.append("\(firstRangeNumber)")
+//    subsequenceFibonacci.append("\(secondRangeNumber)")
 //
-//    for i in rangeA...index {
-//        let rightNumber = firstNumber + secondNumber
-//        subsequenceFibonacci.append(rightNumber)
-//        firstNumber = secondNumber
-//        secondNumber = rightNumber
+//    for _ in leftRangeNumber...index {
+//        let rightRangeNumber = firstRangeNumber + secondRangeNumber
+//        subsequenceFibonacci.append("\(rightRangeNumber)")
+//        firstRangeNumber = secondRangeNumber
+//        secondRangeNumber = rightRangeNumber
 //    }
 //    
 //    return subsequenceFibonacci
 //}
 //
-//print(subsequenceFibonacciForIndex(index: 12))
+//subsequenceFibonacciForIndex(index: 7)
+
+
+func subsequenceFibonacciForIndex(index: Int) -> [Int] {
+    let leftRangeNumber = 2
+    var subsequenceFibonacci: [Int] = []
+    var firstRangeNumber = 1
+    var secondRangeNumber = 1
+
+    subsequenceFibonacci.append(firstRangeNumber)
+    subsequenceFibonacci.append(secondRangeNumber)
+
+    for _ in leftRangeNumber...index {
+        let rightRangeNumber = firstRangeNumber + secondRangeNumber
+        subsequenceFibonacci.append(rightRangeNumber)
+        firstRangeNumber = secondRangeNumber
+        secondRangeNumber = rightRangeNumber
+    }
+    
+    return subsequenceFibonacci
+}
+
+print(subsequenceFibonacciForIndex(index: 12))
 
 
 //Task11
