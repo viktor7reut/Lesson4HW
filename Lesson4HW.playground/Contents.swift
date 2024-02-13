@@ -273,15 +273,9 @@ print(summer)
 
 // Task2
 
-func numberMountForSeasons(number: Int) -> Seasons? {
-    enum Seasons {
-        case winter
-        case spring
-        case summer
-        case autumn
-    }
+func numberMountForSeasons(numberMount: Int) -> Seasons? {
     
-    switch number {
+    switch numberMount {
     case 12, 1, 2:
         return .winter
     case 3, 4, 5:
@@ -296,4 +290,4 @@ func numberMountForSeasons(number: Int) -> Seasons? {
 }
 
 
-print(numberMountForSeasons(number: 1) ?? 0)
+print(numberMountForSeasons(numberMount: 3) ?? 0)
