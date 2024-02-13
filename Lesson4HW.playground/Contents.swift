@@ -252,3 +252,48 @@ func sumNumbers(number: Int) -> Int {
 }
 
 print(sumNumbers(number: 1523))
+
+
+
+// enum
+
+// Task1
+
+enum Seasons {
+    case winter
+    case spring
+    case summer
+    case autumn
+}
+
+let summer: Seasons = .summer
+print(summer)
+
+
+
+// Task2
+
+func numberMountForSeasons(number: Int) -> Seasons? {
+    enum Seasons {
+        case winter
+        case spring
+        case summer
+        case autumn
+    }
+    
+    switch number {
+    case 12, 1, 2:
+        return .winter
+    case 3, 4, 5:
+        return .spring
+    case 6, 7, 8:
+        return .summer
+    case 9, 10, 11:
+        return .autumn
+    default:
+        return nil
+    }
+}
+
+
+print(numberMountForSeasons(number: 1) ?? 0)
