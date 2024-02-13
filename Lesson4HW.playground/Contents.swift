@@ -291,3 +291,24 @@ func numberMountForSeasons(numberMount: Int) -> Seasons? {
 
 
 print(numberMountForSeasons(numberMount: 3) ?? 0)
+
+
+
+//Task3
+
+func variadicStringCountNil(variadicString strings: String?...) -> Int {
+    var countOfNil: Int = 0
+    var stringsFinal: String = ""
+    
+    for string in strings {
+        if let stringValue = string {
+            stringsFinal.append(stringValue)
+        } else {
+            countOfNil += 1
+        }
+    }
+    print(stringsFinal)
+    return countOfNil
+}
+
+print(variadicStringCountNil(variadicString: "Swift", nil, "Apple", "iOs", nil, nil))
